@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachel Dray | Audit Professional Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4b5563;
+            --accent-blue: #004a99;
+            --border-color: #e5e7eb;
+            --hover-bg: #f9fafb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 2px solid var(--text-primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 10% 50px 10%;
+            background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 60px;
+            width: 100%;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid var(--text-primary);
+            object-fit: cover;
+            box-shadow: 12px 12px 0px var(--accent-blue);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: crosshair;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 20px 20px 0px var(--text-primary);
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--text-primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border: 2px solid var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--text-primary);
+            transform: translateY(-3px);
+        }
+
+        /* --- General Sections --- */
+        section {
+            padding: 100px 10%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            width: 30px;
+            height: 4px;
+            background: var(--accent-blue);
+            margin-right: 15px;
+        }
+
+        /* --- Competencies Grid --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2px;
+            background-color: var(--text-primary);
+            border: 2px solid var(--text-primary);
+        }
+
+        .skill-card {
+            background: white;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            background: var(--hover-bg);
+            padding-left: 50px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+        }
+
+        /* --- Workpaper List --- */
+        .workpaper-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s ease;
+        }
+
+        .workpaper-item:hover {
+            background: #fafafa;
+        }
+
+        .workpaper-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border: 1px solid var(--text-primary);
+            margin-bottom: 10px;
+            background: #fff;
+        }
+
+        /* --- Contact Form Area --- */
+        .sign-off-box {
+            background: var(--hover-bg);
+            border: 1px solid var(--border-color);
+            padding: 60px;
+            text-align: center;
+        }
+
+        footer {
+            padding: 40px 10%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">RACHEL DRAY // AUDIT.FILE</div>
+        <nav>
+            <a href="#about">Memo</a>
+            <a href="#skills">Competencies</a>
+            <a href="#workpapers">Workpapers</a>
+            <a href="#contact">Sign-off</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container">
+            <img src="Assets/ProfilePic.jpg" alt="Rachel Dray Professional Portrait" class="profile-img">
+            
+            <div class="hero-text">
+                <h1>RACHEL DRAY</h1>
+                <p class="tagline">Junior Auditor focusing on high-integrity risk assessment and control validation.</p>
+                <a href="#workpapers" class="cta-button">REVIEW ENGAGEMENTS</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Executive Summary</h2>
+        <div style="max-width: 750px;">
+            <p style="font-family: monospace; color: var(--accent-blue); margin-bottom: 20px;">[CONFIDENTIAL - FOR RECRUITMENT PURPOSES]</p>
+            <p>
+                Analytical professional-in-training with a robust foundation in <strong>Audit & Assurance</strong>. 
+                Expertise in evaluating internal control frameworks and identifying financial variances through 
+                diligent substantive testing. Known for a meticulous approach to data integrity and 
+                a commitment to GAAP compliance.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Risk Mitigation</h3>
+                <p>Strategizing to reduce material misstatement risks through proactive internal control evaluation.</p>
+            </div>
+            <div class="skill-card">
+                <h3>SOX Compliance</h3>
+                <p>Familiarity with Section 404 requirements and the documentation of internal control over financial reporting.</p>
+            </div>
+            <div class="skill-card"><h3>Statistical Sampling</h3>
+                <p>Applying rigorous sampling methodologies to ensure audit evidence is representative and defensible.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Variance Analysis</h3>
+                <p>Investigating significant fluctuations in financial data to ensure operational transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="workpapers">
+        <h2>Active Workpapers</h2>
+        
+        <div class="workpaper-item">
+            <div class="workpaper-info">
+                <span class="status-badge" style="background: var(--accent-blue); color: white;">Interactive App</span>
+                <h3>Interview Prep Master</h3>
+                <p>A gamified web application built with HTML, CSS, and JS to track, practice, and analyze interview confidence levels.</p>
+            </div>
+            <a href="Interview-App/index.html" target="_blank" class="cta-button" style="font-size: 0.8rem;">LAUNCH APP</a>
+        </div>
+
+        <div class="workpaper-item">
+            <div class="workpaper-info">
+                <span class="status-badge">Audit Passed</span>
+                <h3>Internal Control Framework Review</h3>
+                <p>Mock audit of a procurement cycle identifying three significant control deficiencies and proposing remediation.</p>
+            </div>
+            <a href="#" class="cta-button" style="font-size: 0.8rem;">OPEN FILE</a>
+        </div>
+
+        <div class="workpaper-item">
+            <div class="workpaper-info">
+                <span class="status-badge">In Review</span>
+                <h3>Revenue Recognition Analysis</h3>
+                <p>Testing revenue cut-offs and deferred income accuracy under ASC 606 guidelines.</p>
+            </div>
+            <a href="#" class="cta-button" style="font-size: 0.8rem;">OPEN FILE</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Engagement Sign-off</h2>
+        <div class="sign-off-box">
+            <p style="margin-bottom: 20px;">Ready to discuss how I can add value to your audit team.</p>
+            <p><strong>EMAIL:</strong> <a href="mailto:drayrmd313@gmail.com" style="color: var(--accent-blue);">rdray962@gmail.com</a></p>
+            <p><strong>LINKEDIN:</strong> linkedin.com/in/racheldray</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 RACHEL DRAY // AUDIT & ASSURANCE PORTFOLIO // BUILT FOR PRECISION</p>
+    </footer>
+
+</body>
+</html>

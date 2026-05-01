@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "category": "Behavioral",
+    "level": "Entry Level",
+    "question": "Tell me about a time you had to work with a difficult team member.",
+    "hint": "Use the STAR method (Situation, Task, Action, Result). Focus on your professionalism and conflict resolution.",
+    "keywords": ["listen", "communicate", "compromise", "action", "result", "understand", "calm", "solution", "talked"],
+    "expertInsight": "Strong answers focus on your emotional intelligence and the steps *you* took to resolve the issue, rather than just complaining about the coworker."
+  },
+  {
+    "id": 2,
+    "category": "Technical",
+    "level": "Mid Level",
+    "question": "Explain the difference between REST and GraphQL.",
+    "hint": "Discuss over-fetching vs. under-fetching, and how endpoints are structured.",
+    "keywords": ["endpoint", "endpoints", "over-fetching", "under-fetching", "query", "flexible", "multiple", "single"],
+    "expertInsight": "Interviewers want to hear that REST uses multiple fixed endpoints, while GraphQL uses a single endpoint that returns exactly the data you query."
+  },
+  {
+    "id": 3,
+    "category": "General",
+    "level": "Entry Level",
+    "question": "Where do you see yourself in 5 years?",
+    "hint": "Align your personal goals with the trajectory of the role and the company's growth.",
+    "keywords": ["grow", "growth", "leadership", "learn", "skills", "contribute", "value", "develop"],
+    "expertInsight": "Avoid sounding like you'll use the company as a stepping stone. Emphasize growing *with* the company and taking on more responsibility."
+  },
+  {
+    "id": 4,
+    "category": "Leadership",
+    "level": "Senior Level",
+    "question": "Describe a time you had to pivot a major project at the last minute.",
+    "hint": "Highlight your adaptability, communication with stakeholders, and ability to manage team morale.",
+    "keywords": ["communicate", "stakeholders", "team", "adapt", "flexible", "prioritize", "transparent", "morale"],
+    "expertInsight": "At the senior level, the focus shouldn't just be on the work itself, but on how you managed the expectations of stakeholders and the stress levels of your team."
+  },
+  {
+    "id": 5,
+    "category": "Problem Solving",
+    "level": "Mid Level",
+    "question": "Tell me about a time you failed and what you learned from it.",
+    "hint": "Be honest but strategic. The key is the 'learning' part—show accountability and growth.",
+    "keywords": ["learned", "mistake", "accountable", "responsibility", "improve", "next time", "prevent", "grew"],
+    "expertInsight": "A common trap is the 'humblebrag' (e.g., 'I worked too hard'). Pick a real, fixable mistake and spend 80% of your answer talking about how you ensured it never happened again."
+  },
+  {
+    "id": 6,
+    "category": "Technical",
+    "level": "Entry Level",
+    "question": "What is the DOM in web development?",
+    "hint": "Explain the Document Object Model as a tree structure that represents the HTML document.",
+    "keywords": ["document", "object", "model", "tree", "nodes", "javascript", "interface", "html"],
+    "expertInsight": "Keep it simple: It's the browser's internal representation of the HTML page, structured like a tree, which allows JavaScript to manipulate the content and styling."
+  },
+  {
+    "id": 7,
+    "category": "Behavioral",
+    "level": "Senior Level",
+    "question": "How do you handle pushback from executives on your strategic proposals?",
+    "hint": "Discuss active listening, relying on data to back up claims, and knowing when to compromise.",
+    "keywords": ["data", "metrics", "listen", "understand", "compromise", "align", "goals", "evidence"],
+    "expertInsight": "Executives care about ROI and risk. The best answers mention taking a step back to understand their concerns, then using data (not emotions) to defend your strategy."
+  },
+  {
+    "id": 8,
+    "category": "General",
+    "level": "Mid Level",
+    "question": "Why do you want to work for this company?",
+    "hint": "Mention specific recent projects, company values, or culture aspects that genuinely excite you.",
+    "keywords": ["culture", "values", "product", "mission", "research", "impact", "admire", "recent"],
+    "expertInsight": "Generic answers fail here. You must mention something specific about *them*—a recent product launch, an article about their culture, or their specific mission statement."
+  },
+  {
+    "id": 9,
+    "category": "Problem Solving",
+    "level": "Entry Level",
+    "question": "How do you prioritize your work when you have multiple tight deadlines?",
+    "hint": "Talk about tools you use (like Trello or Jira) and frameworks like the Eisenhower Matrix.",
+    "keywords": ["urgent", "important", "communicate", "manager", "matrix", "tools", "trello", "jira", "organize"],
+    "expertInsight": "Show that you have a system. Mentioning a framework like Urgent vs. Important, or noting that you'd ask your manager for clarification if things clash, shows maturity."
+  },
+  {
+    "id": 10,
+    "category": "Technical",
+    "level": "Senior Level",
+    "question": "How would you design a scalable system for a real-time chat application?",
+    "hint": "Cover database choices, WebSockets, load balancing, and handling offline states.",
+    "keywords": ["websockets", "database", "load balancer", "scale", "nosql", "redis", "cache", "latency"],
+    "expertInsight": "For system design, don't just jump to coding. Start by defining requirements (how many users?), discuss WebSockets for real-time connection, and a fast cache like Redis."
+  }
+]
